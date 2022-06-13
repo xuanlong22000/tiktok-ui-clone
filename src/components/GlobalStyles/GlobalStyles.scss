@@ -1,0 +1,24 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz@8..144&display=swap');
+
+:root{
+    --primary: #fe2c55;
+    --default-layout-header-height:60px;
+    --default-layout-width:1150px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
