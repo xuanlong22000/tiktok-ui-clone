@@ -6,6 +6,8 @@ import { faCircleCheck } from '@fortawesome/free-solid-svg-icons'
 
 const cx = classNames.bind(styles)
 
+//test PC
+
 const AccountItem = () => {
     return (
         <div className={cx('wrapper')}>
