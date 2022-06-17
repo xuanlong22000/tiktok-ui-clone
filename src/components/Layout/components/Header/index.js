@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import images from '~/assets/images'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleXmark, faMagnifyingGlass, faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import { faCircleXmark, faEllipsisVertical, faMagnifyingGlass, faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import 'tippy.js/dist/tippy.css'
 import classNames from 'classnames/bind'
 import styles from './Header.module.scss'
@@ -9,6 +9,7 @@ import { Wrapper as PopperWrapper } from '~/components/Popper'
 import Button from '~/components/Button'
 import Tippy from '@tippyjs/react/headless'
 import AccountItem from '~/components/AccountItem'
+import Menu from '~/components/Popper/Menu'
 
 const cx = classNames.bind(styles)
 
@@ -67,6 +68,11 @@ export const Header = () => {
                             Upload
                         </Button>
                         <Button primary>Login</Button>
+                        <Menu>
+                            <button className={cx('more-btn')}>
+                                <FontAwesomeIcon icon={faEllipsisVertical} />
+                            </button>
+                        </Menu>
                     </div>
                 </div>
 
