@@ -16,12 +16,15 @@ const cx = classNames.bind(styles)
 export const Header = () => {
 
     const [search, setSearch] = useState([])
+    const currentUser = true
 
     useEffect(() => {
         setTimeout(() => {
             setSearch([])
         }, 0);
     }, [])
+
+
 
     return (
         <>
@@ -63,17 +66,32 @@ export const Header = () => {
                             </button>
                         </div>
                     </Tippy>
-                    <div className={cx('actions')}>
-                        <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
-                            Upload
-                        </Button>
-                        <Button primary>Login</Button>
-                        <Menu>
-                            <button className={cx('more-btn')}>
-                                <FontAwesomeIcon icon={faEllipsisVertical} />
-                            </button>
-                        </Menu>
-                    </div>
+
+                    {currentUser
+
+                        ?
+
+                        <div className={cx('current-user')}>
+
+
+                        </div>
+
+                        :
+
+                        <div className={cx('actions')}>
+                            <Button text leftIcon={<FontAwesomeIcon icon={faPlus} />}>
+                                Upload
+                            </Button>
+                            <Button primary>Login</Button>
+                            <Menu>
+                                <button className={cx('more-btn')}>
+                                    <FontAwesomeIcon icon={faEllipsisVertical} />
+                                </button>
+                            </Menu>
+                        </div>
+                    }
+
+
                 </div>
 
             </header>

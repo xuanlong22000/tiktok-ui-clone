@@ -83,7 +83,6 @@ const Menu = ({ children }) => {
     return (
 
         <Tippy
-            visible
             delay={[0, 700]}
             placement='bottom-end'
             interactive
@@ -100,6 +99,7 @@ const Menu = ({ children }) => {
                 </div>
 
             )}
+            onHidden={() => { setHistory(pre => pre.slice(0, 1)) }}
         >
             {children}
         </Tippy>
